@@ -2,11 +2,23 @@
 .env
 .env.local
 .env.*.local
+.env.production
 
 # Volume data
 volumes/db/data/
 volumes/storage/*
 !volumes/storage/.gitkeep
+volumes/backups/*
+!volumes/backups/.gitkeep
+volumes/traefik/acme.json
+volumes/traefik/*.pem
+
+# Grafana/Prometheus data
+volumes/grafana/data/
+volumes/prometheus/data/
+
+# Vault data
+volumes/vault/data/
 
 # Logs
 *.log
@@ -23,6 +35,5 @@ Thumbs.db
 *.swo
 
 # Backups
-*.sql
-*.backup
-*.tar.gz
+volumes/backups/*.sql.gz
+volumes/backups/*.tar.gz

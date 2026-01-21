@@ -1,0 +1,15 @@
+# Grafana Dashboard Provisioning
+
+apiVersion: 1
+
+providers:
+  - name: 'Supabase Dashboards'
+    orgId: 1
+    folder: 'Supabase'
+    folderUid: 'supabase'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/json
