@@ -1,0 +1,28 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Volume data
+volumes/db/data/
+volumes/storage/*
+!volumes/storage/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Backups
+*.sql
+*.backup
+*.tar.gz
